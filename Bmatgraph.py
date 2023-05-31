@@ -26,7 +26,7 @@ graph_data.index=graph_data.index.astype(str)
 
 # graph 생성
 fig, ax = plt.subplots()
-fig.set_size_inches(15, 4)
+fig.set_size_inches(10, 5)
 for i in range(len(graph_column)):
     grap_list=graph_data[[i]]
     ax.plot(grap_list,linestyle='-',linewidth=1.0,label=graph_column[i],color=color_list[i]) # SVC
@@ -42,7 +42,7 @@ for i in range(len(graph_data.index)):
     ax.annotate(graph_data.at[i,4],xy=(graph_data.at[i,"index"],graph_data.at[i,4]), va='bottom', color='#ED7D31',fontsize=9)
 
 ax.yaxis.tick_right()
-ax.legend(loc='upper center', bbox_to_anchor=(0.5,1.22), ncol=4)
+ax.legend(loc='upper left', bbox_to_anchor=(0.5,1.15), ncol=4)
 #그림 저장
 plt.tight_layout()
 plt.savefig(save_path+file_name)
@@ -62,7 +62,7 @@ graph_data.index=graph_data.index.astype(str)
 
 # graph 생성
 fig, ax = plt.subplots()
-fig.set_size_inches(15, 4)
+fig.set_size_inches(10, 5)
 for i in range(len(graph_column)):
     grap_list=graph_data[[i]]
     ax.plot(grap_list,linestyle='-', label=graph_column[i],linewidth=1.0,color=color_list[i]) # SVC
@@ -79,7 +79,7 @@ for i in range(len(graph_data.index)):
     ax.annotate(graph_data.at[i,5],xy=(graph_data.at[i,"index"],graph_data.at[i,5]), va='bottom', color='#6600CC',fontsize=9)
 
 ax.yaxis.tick_right()
-ax.legend(loc='upper center',  bbox_to_anchor=(0.5,1.22), ncol=4)
+ax.legend(loc='upper left', bbox_to_anchor=(0.5,1.15), ncol=4)
 #그림 저장
 plt.tight_layout()
 plt.savefig(save_path+file_name)
@@ -98,7 +98,7 @@ graph_data.index=graph_data.index.astype(str)
 
 # graph 생성
 fig, ax = plt.subplots()
-fig.set_size_inches(15, 4)
+fig.set_size_inches(10, 5)
 for i in range(len(graph_column)):
     grap_list=graph_data[[i]]
     ax.plot(grap_list,linestyle='-', label=graph_column[i],linewidth=1.0,color=color_list[i]) # SVC
@@ -116,7 +116,7 @@ for i in range(len(graph_data.index)):
     ax.annotate(graph_data.at[i,6],xy=(graph_data.at[i,"index"],graph_data.at[i,6]), va='bottom', color='#FF66FF',fontsize=9)
 
 ax.yaxis.tick_right()
-ax.legend(loc='upper center',  bbox_to_anchor=(0.5,1.22), ncol=4)
+ax.legend(loc='upper left', bbox_to_anchor=(0.5,1.15), ncol=4)
 #그림 저장
 plt.tight_layout()
 plt.savefig(save_path+file_name)
@@ -136,7 +136,7 @@ graph_data.index=graph_data.index.astype(str)
 
 # graph 생성
 fig, ax = plt.subplots()
-fig.set_size_inches(15, 4)
+fig.set_size_inches(10, 5)
 for i in range(len(graph_column)):
     grap_list=graph_data[[i]]
     ax.plot(grap_list,linestyle='-', label=graph_column[i],linewidth=1.0,color=color_list[i]) # SVC
@@ -152,7 +152,7 @@ for i in range(len(graph_data.index)):
     ax.annotate(graph_data.at[i,4],xy=(graph_data.at[i,"index"],graph_data.at[i,4]), va='bottom', color='#ED7D31',fontsize=9)
 
 ax.yaxis.tick_right()
-ax.legend(loc='upper center',  bbox_to_anchor=(0.5,1.22), ncol=4)
+ax.legend(loc='right', bbox_to_anchor=(0,0.12), ncol=1)
 #그림 저장
 plt.tight_layout()
 plt.savefig(save_path+file_name)
@@ -172,7 +172,7 @@ graph_data.index=graph_data.index.astype(str)
 
 # graph 생성
 fig, ax = plt.subplots()
-fig.set_size_inches(15, 4)
+fig.set_size_inches(10, 5)
 for i in range(len(graph_column)):
     grap_list=graph_data[[i]]
     ax.plot(grap_list,linestyle='-', label=graph_column[i],linewidth=1.0,color=color_list[i]) # SVC
@@ -189,7 +189,7 @@ for i in range(len(graph_data.index)):
     ax.annotate(graph_data.at[i,5],xy=(graph_data.at[i,"index"],graph_data.at[i,5]), va='bottom', color='#6600CC',fontsize=9)
 
 ax.yaxis.tick_right()
-ax.legend(loc='upper center',  bbox_to_anchor=(0.5,1.22), ncol=4)
+ax.legend(loc='upper left', bbox_to_anchor=(0.5,1.15), ncol=4)
 #그림 저장
 plt.tight_layout()
 plt.savefig(save_path+file_name)
@@ -209,7 +209,7 @@ graph_data.index=graph_data.index.astype(str)
 
 # graph 생성
 fig, ax = plt.subplots()
-fig.set_size_inches(15, 4)
+fig.set_size_inches(10, 5)
 for i in range(len(graph_column)):
     grap_list=graph_data[[i]]
     ax.plot(grap_list,linestyle='-', label=graph_column[i],linewidth=1.0,color=color_list[i]) # SVC
@@ -227,7 +227,7 @@ for i in range(len(graph_data.index)):
     ax.annotate(graph_data.at[i,6],xy=(graph_data.at[i,"index"],graph_data.at[i,6]), va='bottom', color='#FF66FF',fontsize=9)
 
 ax.yaxis.tick_right()
-ax.legend(loc='upper center',  bbox_to_anchor=(0.5,1.22), ncol=4)
+ax.legend(loc='upper left', bbox_to_anchor=(0.5,1.15), ncol=4)
 #그림 저장
 plt.tight_layout()
 plt.savefig(save_path+file_name)

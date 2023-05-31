@@ -8,6 +8,7 @@ from email.mime.application import MIMEApplication
 from Chtml import this_week, F_BPAE_html, T_BPAE_html, D_BPAE_html, F_PACE_html, T_PACE_html, D_PACE_html, FBI_html, TBI_html, DBI_html, FPI_html, TPI_html, DPI_html
 from Bmatgraph import save_path,today_date
 import os
+import Bmatgraph
 
 #html - table
 server = smtplib.SMTP('lgekrhqmh01.lge.com:25')
@@ -111,8 +112,8 @@ msg.attach(DPI_attach)
 
 
 #첨부 파일1
-etcFileName='Cost Review_0526.xlsx'
-with open("C:/Users/RnD Workstation/Documents/CostReview/0526/Cost Review_0526.xlsx", 'rb') as etcFD : 
+etcFileName='Cost Review_0602.xlsx'
+with open("C:/Users/RnD Workstation/Documents/CostReview/0602/Cost Review_0602.xlsx", 'rb') as etcFD : 
     etcPart = MIMEApplication( etcFD.read() )
     #첨부파일의 정보를 헤더로 추가
     etcPart.add_header('Content-Disposition','attachment', filename=etcFileName)
