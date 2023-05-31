@@ -18,8 +18,8 @@ D_original_BPAE=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/051
 D_original_PACE=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0519/Cost Review_0519.xlsx", sheet_name="DR_PAC")
 
 #read new data
-bpa_entity=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="BPA Entity")
-pac_entity=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="PAC Entity")
+bpa_entity=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="BPA Entity")
+pac_entity=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="PAC Entity")
 
 #remain required  new data
 BPAE=bpa_entity[["Model.Suffix","Net RMC (USD)"]]
@@ -95,13 +95,13 @@ D_BPAE_Merge.index=range(1,len(D_BPAE_Merge)+1)
 D_PACE_Merge.index=range(1,len(D_PACE_Merge)+1)
 ############################ Item Table ############################  
 #data read
-F_BPA_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="BPA FL")
-D_BPA_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="BPA Dryer")
-T_BPA_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="BPA TL")
+F_BPA_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="BPA FL")
+D_BPA_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="BPA Dryer")
+T_BPA_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="BPA TL")
 
-F_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="FL_PAC_Item2")
-D_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="DR_PAC_Item2")
-T_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/data.xlsx", sheet_name="TL_PAC_Item")
+F_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="FL_PAC_Item2")
+D_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="DR_PAC_Item2")
+T_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/data.xlsx", sheet_name="TL_PAC_Item")
 
 
 #data required
@@ -386,51 +386,51 @@ for i in range(len(DPI_L)):
 #Total value
 FBI_P_1_sum=FBI_P_1.sum()
 FBI_P_1.at["Total","VI"]=FBI_P_1_sum["VI"]
-FBI_P_1=FBI_P_1.fillna("")
+FBI_P_1=FBI_P_1.fillna("").round(2)
 
 FBI_P_2_sum=FBI_P_2.sum()
 FBI_P_2.at["Total","VI.1"]=FBI_P_2_sum["VI.1"]
-FBI_P_2=FBI_P_2.fillna("")
+FBI_P_2=FBI_P_2.fillna("").round(2)
 
 TBI_P_1_sum=TBI_P_1.sum()
 TBI_P_1.at["Total","VI"]=TBI_P_1_sum["VI"]
-TBI_P_1=FBI_P_1.fillna("")
+TBI_P_1=FBI_P_1.fillna("").round(2)
 
 TBI_P_2_sum=TBI_P_2.sum()
 TBI_P_2.at["Total","VI.1"]=TBI_P_2_sum["VI.1"]
-TBI_P_2=TBI_P_2.fillna("")
+TBI_P_2=TBI_P_2.fillna("").round(2)
 
 DBI_P_1_sum=DBI_P_1.sum()
 DBI_P_1.at["Total","VI"]=DBI_P_1_sum["VI"]
-DBI_P_1=DBI_P_1.fillna("")
+DBI_P_1=DBI_P_1.fillna("").round(2)
 
 DBI_P_2_sum=DBI_P_2.sum()
 DBI_P_2.at["Total","VI.1"]=DBI_P_2_sum["VI.1"]
-DBI_P_2=DBI_P_2.fillna("")
+DBI_P_2=DBI_P_2.fillna("").round(2)
 
 FPI_P_1_sum=FPI_P_1.sum()
 FPI_P_1.at["Total","VI"]=FPI_P_1_sum["VI"]
-FPI_P_1=FPI_P_1.fillna("")
+FPI_P_1=FPI_P_1.fillna("").round(2)
 
 FPI_P_2_sum=FPI_P_2.sum()
 FPI_P_2.at["Total","VI.1"]=FPI_P_2_sum["VI.1"]
-FPI_P_2=FPI_P_2.fillna("")
+FPI_P_2=FPI_P_2.fillna("").round(2)
 
 TPI_P_1_sum=TPI_P_1.sum()
 TPI_P_1.at["Total","VI"]=TPI_P_1_sum["VI"]
-TPI_P_1=TPI_P_1.fillna("")
+TPI_P_1=TPI_P_1.fillna("").round(2)
 
 TPI_P_2_sum=TPI_P_2.sum()
 TPI_P_2.at["Total","VI.1"]=TPI_P_2_sum["VI.1"]
-TPI_P_2=TPI_P_2.fillna("")
+TPI_P_2=TPI_P_2.fillna("").round(2)
 
 DPI_P_1_sum=DPI_P_1.sum()
 DPI_P_1.at["Total","VI"]=DPI_P_1_sum["VI"]
-DPI_P_1=DPI_P_1.fillna("")
+DPI_P_1=DPI_P_1.fillna("").round(2)
 
 DPI_P_2_sum=DPI_P_2.sum()
 DPI_P_2.at["Total","VI.1"]=DPI_P_2_sum["VI.1"]
-DPI_P_2=DPI_P_2.fillna("")
+DPI_P_2=DPI_P_2.fillna("").round(2)
 
 
 #rename the decrease VI.1 Date.1
@@ -442,7 +442,10 @@ FPI_P_2=FPI_P_2.rename(columns={"VI.1":"VI","Date.1":"Date"})
 TPI_P_2=TPI_P_2.rename(columns={"VI.1":"VI","Date.1":"Date"})
 DPI_P_2=DPI_P_2.rename(columns={"VI.1":"VI","Date.1":"Date"})
 
-#remove all total column
+
+
+############################ Write excel change data ############################  
+#remove all total column for excel file format
 FBI1=FBI_P_1.drop("Total",axis=0)
 FBI2=FBI_P_2.drop("Total",axis=0)
 
@@ -470,7 +473,7 @@ TPI_merge = pd.concat([TPI1, TPI2], axis=1)
 DPI_merge = pd.concat([DPI1, DPI2], axis=1)
 
 ############################ Write excel ############################  
-file_writer = pd.ExcelWriter("C:/Users/RnD Workstation/Documents/CostReview/0526/Cost Review_0526.xlsx", engine="xlsxwriter")
+file_writer = pd.ExcelWriter("C:/Users/RnD Workstation/Documents/CostReview/0602/Cost Review_0602.xlsx", engine="xlsxwriter")
 
 F_BPAE_Merge.to_excel(file_writer, sheet_name="FL_BPA")
 FBI_merge.to_excel(file_writer, sheet_name="FL_BPA_Item")
@@ -564,3 +567,4 @@ D_BPAE_html=D_BPAE_html.replace(thisweek_html,thisweek_strong)
 F_PACE_html=F_PACE_html.replace(thisweek_html,thisweek_strong)
 T_PACE_html=T_PACE_html.replace(thisweek_html,thisweek_strong)
 D_PACE_html=D_PACE_html.replace(thisweek_html,thisweek_strong)
+
