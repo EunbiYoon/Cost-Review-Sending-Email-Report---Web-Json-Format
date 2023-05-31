@@ -5,8 +5,8 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication 
-from table import this_week, F_BPAE_html, T_BPAE_html, D_BPAE_html, F_PACE_html, T_PACE_html, D_PACE_html, FBI_html, TBI_html, DBI_html, FPI_html, TPI_html, DPI_html
-from graph import save_path,today_date
+from Chtml import this_week, F_BPAE_html, T_BPAE_html, D_BPAE_html, F_PACE_html, T_PACE_html, D_PACE_html, FBI_html, TBI_html, DBI_html, FPI_html, TPI_html, DPI_html
+from Bmatgraph import save_path,today_date
 import os
 
 #html - table

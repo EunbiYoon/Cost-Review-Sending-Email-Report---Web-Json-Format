@@ -1,4 +1,4 @@
-from table import F_BPAE_Merge,T_BPAE_Merge,D_BPAE_Merge,F_PACE_Merge,T_PACE_Merge,D_PACE_Merge
+from Adata import F_BPAE_Merge,T_BPAE_Merge,D_BPAE_Merge,F_PACE_Merge,T_PACE_Merge,D_PACE_Merge
 import matplotlib.pyplot as plt
 from matplotlib import rc
 from matplotlib.pyplot import figure
@@ -7,8 +7,8 @@ from random import randrange
 import numpy as np
 
 #save file location
-save_path="C:/Users/RnD Workstation/Documents/CostReview/0526/"
-today_date="_0526"
+save_path="C:/Users/RnD Workstation/Documents/CostReview/0602/"
+today_date="_0602"
 color_list=['#4472C4','#A5A5A5','#70AD47','#FFC000','#ED7D31','#6600CC','#FF66FF']
 
 ########################################## FL - BPA Entity ##########################################
