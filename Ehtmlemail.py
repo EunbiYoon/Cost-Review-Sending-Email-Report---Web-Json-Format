@@ -19,7 +19,7 @@ msg=MIMEMultipart()
 
 # 수신자 발신자 지정
 msg['From']='eunbi1.yoon@lge.com'
-# msg['To' ]='iggeun.kwon@lge.com'
+msg['To' ]='aaron1.garcia@lge.com'
 # msg['Cc']='janine.williams@lge.com, karina1.beveridge@lge.com, kitae3.park@lge.com, soyoung1.an@lge.com, soyoon1.kim@lge.com, wolyong.ha@lge.com, grace.hwang@lge.com, tg.kim@lge.com, seongju.yu@lge.com, minhyoung.sun@lge.com, jongseop.kim@lge.com, richard.song@lge.com, gilnam.lee@lge.com, jacey.jung@lge.com, ##312718@lge.com'
 msg['Bcc']='eunbi1.yoon@lge.com'
 
@@ -116,7 +116,7 @@ msg.attach(MIMEText('<br/><br/><h3 style="font-family:sans-serif;">Top Loader PA
 msg.attach(image5)
 msg.attach(T_PACE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(TPI1_attach)
+# msg.attach(TPI1_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
 msg.attach(TPI2_attach)
 
@@ -124,7 +124,7 @@ msg.attach(MIMEText('<br/><br/><h3 style="font-family:sans-serif;">Dryer PAC Ent
 msg.attach(image6)
 msg.attach(D_PACE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(DPI1_attach)
+# msg.attach(DPI1_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
 msg.attach(DPI2_attach)
 
