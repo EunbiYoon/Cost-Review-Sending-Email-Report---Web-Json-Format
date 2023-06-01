@@ -8,7 +8,6 @@ from email.mime.application import MIMEApplication
 from Chtml import this_week, F_BPAE_html, T_BPAE_html, D_BPAE_html, F_PACE_html, T_PACE_html, D_PACE_html,FBI1_html,FBI2_html,TBI1_html,TBI2_html,DBI1_html,DBI2_html,FPI1_html,FPI2_html,TPI1_html,TPI2_html,DPI1_html,DPI2_html
 from Bmatgrptbl import save_path,today_date
 import os
-import Bmatgrptbl
 
 #html - table
 server = smtplib.SMTP('lgekrhqmh01.lge.com:25')
@@ -26,7 +25,7 @@ msg['Bcc']='eunbi1.yoon@lge.com'
 
 #Subject 꾸미기
 msg['Subject']='Cost Review Report '+this_week
-msg.attach(MIMEText('<h4 style="font-family:sans-serif; font-weight:500">Dear all,<br/><br/>I would like to share this week cost review report and detailed informations are in below website.<br/>You can access website from CloudPC or LG wifi for security purpose. <a href="http://10.225.2.85">http://10.225.2.85</a></h4>','html'))
+msg.attach(MIMEText('<h4 style="font-family:sans-serif; font-weight:500">Dear all,<br/><br/>I would like to share this week cost review report and detailed informations are in below website.<br/>You can access website with Chrome or Edge from CloudPC or LG wifi for security purpose. <a href="http://10.225.2.85">http://10.225.2.85</a></h4>','html'))
 # msg.attach(MIMEText('<h3 style="font-family:sans-serif;">[matching number format in item list]<br/>Dear Catalina,</h3><h4 style="font-family:sans-serif; font-weight:500">Please chek final data of item and graph change,</h4>','html'))
 
 

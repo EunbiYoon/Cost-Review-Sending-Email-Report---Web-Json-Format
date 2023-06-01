@@ -233,4 +233,4 @@ ax.legend(loc='right', bbox_to_anchor=(1,0.865), ncol=1)
 #그림 저장
 plt.tight_layout()
 plt.savefig(save_path+file_name)
-plt.show()
+
