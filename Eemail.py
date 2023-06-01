@@ -5,10 +5,10 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication 
-from Chtml import this_week, F_BPAE_html, T_BPAE_html, D_BPAE_html, F_PACE_html, T_PACE_html, D_PACE_html, FBI_html, TBI_html, DBI_html, FPI_html, TPI_html, DPI_html
-from Bmatgraph import save_path,today_date
+from Chtml import this_week, F_BPAE_html, T_BPAE_html, D_BPAE_html, F_PACE_html, T_PACE_html, D_PACE_html,FBI1_html,FBI2_html,TBI1_html,TBI2_html,DBI1_html,DBI2_html,FPI1_html,FPI2_html,TPI1_html,TPI2_html,DPI1_html,DPI2_html
+from Bmatgrptbl import save_path,today_date
 import os
-import Bmatgraph
+import Bmatgrptbl
 
 #html - table
 server = smtplib.SMTP('lgekrhqmh01.lge.com:25')
@@ -66,49 +66,68 @@ F_PACE_attach = MIMEText(F_PACE_html, "html")
 T_PACE_attach = MIMEText(T_PACE_html, "html")
 D_PACE_attach = MIMEText(D_PACE_html, "html")
 
-FBI_attach = MIMEText(FBI_html, "html")
-TBI_attach = MIMEText(TBI_html, "html")
-DBI_attach = MIMEText(DBI_html, "html")
+FBI1_attach = MIMEText(FBI1_html, "html")
+FBI2_attach = MIMEText(FBI2_html, "html")
+TBI1_attach = MIMEText(TBI1_html, "html")
+TBI2_attach = MIMEText(TBI2_html, "html")
+DBI1_attach = MIMEText(DBI1_html, "html")
+DBI2_attach = MIMEText(DBI2_html, "html")
 
-FPI_attach = MIMEText(FPI_html, "html")
-TPI_attach = MIMEText(TPI_html, "html")
-DPI_attach = MIMEText(DPI_html, "html")
+FPI1_attach = MIMEText(FPI1_html, "html")
+FPI2_attach = MIMEText(FPI2_html, "html")
+TPI1_attach = MIMEText(TPI1_html, "html")
+TPI2_attach = MIMEText(TPI2_html, "html")
+DPI1_attach = MIMEText(DPI1_html, "html")
+DPI2_attach = MIMEText(DPI2_html, "html")
+
 
 msg.attach(MIMEText('<br/><h3 style="font-family:sans-serif;">Front Loader BPA Entity Trend</h3>','html'))
 msg.attach(image1)
 msg.attach(F_BPAE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(FBI_attach)
+msg.attach(FBI1_attach)
+msg.attach(MIMEText('<h6> </h6>','html'))
+msg.attach(FBI2_attach)
 
 msg.attach(MIMEText('<br/><br/><h3 style="font-family:sans-serif;">Top Loader BPA Entity Trend</h3>','html'))
 msg.attach(image2)
 msg.attach(T_BPAE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(TBI_attach)
+msg.attach(TBI1_attach)
+msg.attach(MIMEText('<h6> </h6>','html'))
+msg.attach(TBI2_attach)
 
 msg.attach(MIMEText('<br/><br/><h3 style="font-family:sans-serif;">Dryer BPA Entity Trend</h3>','html'))
 msg.attach(image3)
 msg.attach(D_BPAE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(DBI_attach)
+msg.attach(DBI1_attach)
+msg.attach(MIMEText('<h6> </h6>','html'))
+msg.attach(DBI2_attach)
 
 msg.attach(MIMEText('<br/><br/><h3 style="font-family:sans-serif;">Front Loader PAC Entity Trend</h3>','html'))
 msg.attach(image4)
 msg.attach(F_PACE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(FPI_attach)
+msg.attach(FPI1_attach)
+msg.attach(MIMEText('<h6> </h6>','html'))
+msg.attach(FPI2_attach)
 
 msg.attach(MIMEText('<br/><br/><h3 style="font-family:sans-serif;">Top Loader PAC Entity Trend</h3>','html'))
 msg.attach(image5)
 msg.attach(T_PACE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(TPI_attach)
+msg.attach(TPI1_attach)
+msg.attach(MIMEText('<h6> </h6>','html'))
+msg.attach(TPI2_attach)
 
 msg.attach(MIMEText('<br/><br/><h3 style="font-family:sans-serif;">Dryer PAC Entity Trend</h3>','html'))
 msg.attach(image6)
 msg.attach(D_PACE_attach)
 msg.attach(MIMEText('<h6> </h6>','html'))
-msg.attach(DPI_attach)
+msg.attach(DPI1_attach)
+msg.attach(MIMEText('<h6> </h6>','html'))
+msg.attach(DPI2_attach)
 
 
 #첨부 파일1

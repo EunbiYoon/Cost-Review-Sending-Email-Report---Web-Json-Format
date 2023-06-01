@@ -1,9 +1,34 @@
 import pandas as pd
 import openpyxl 
 import sys
-sys.path.insert(0,'C:/Users/RnD Workstation/Documents/CostReview/PGM/Report_Email')
-from data_table import TPI_P_2 as read_value
 
+#automatic working from Adata
+# sys.path.insert(0,'C:/Users/RnD Workstation/Documents/CostReview/PGM/Report_Email')
+# from Adata import TBI_P_2 as read_value
+
+#manually read excel 
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/Cost Review_0602.xlsx", sheet_name="FL_PAC_Item")
+read_excel=read_excel.drop('Unnamed: 0', axis=1)
+
+# read_increase=read_excel[["Increase","VI","Date","Reason"]]
+read_increase=read_excel[["Increase","VI","Date"]]
+read_increase=read_increase.dropna()
+increase_total=read_increase["VI"].sum()
+read_increase.index=range(1,len(read_increase)+1)
+read_increase.at["Total","VI"]=increase_total
+read_increase=read_increase.fillna('')
+
+# read_decrease=read_excel[["Decrease","VI.1","Date.1","Reason.1"]]
+read_decrease=read_excel[["Decrease","VI.1","Date.1"]]
+read_decrease=read_decrease.rename(columns={"VI.1": "VI", "Date.1": "Date","Reason.1":"Reason"})
+read_decrease=read_decrease.dropna()
+decrease_total=read_decrease["VI"].sum()
+read_decrease.index=range(1,len(read_decrease)+1)
+read_decrease.at["Total","VI"]=decrease_total
+read_decrease=read_decrease.fillna('')
+
+read_value=read_decrease
+print(read_value)
 
 ########### increase_item
 #column_list

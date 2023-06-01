@@ -1,4 +1,4 @@
-from Adata import F_BPAE_Merge,T_BPAE_Merge,D_BPAE_Merge,F_PACE_Merge,T_PACE_Merge,D_PACE_Merge,FBI_merge,TBI_merge,DBI_merge,FPI_merge,TPI_merge,DPI_merge, this_week
+from Adata import F_BPAE_Merge,T_BPAE_Merge,D_BPAE_Merge,F_PACE_Merge,T_PACE_Merge,D_PACE_Merge,DBI_P_1,DBI_P_2,TBI_P_1, TBI_P_2,FBI_P_1,FBI_P_2,DPI_P_1,DPI_P_2,TPI_P_1, TPI_P_2,FPI_P_1,FPI_P_2,this_week
 
 ############################ html  ############################  
 # change to html -> table & border
@@ -8,12 +8,21 @@ D_BPAE_html=D_BPAE_Merge.to_html().replace('<table border="1"','<table border="1
 F_PACE_html=F_PACE_Merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:1rem;border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
 T_PACE_html=T_PACE_Merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:1rem;border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
 D_PACE_html=D_PACE_Merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:1rem;border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
-FBI_html=FBI_merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
-TBI_html=TBI_merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
-DBI_html=DBI_merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
-FPI_html=FPI_merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
-TPI_html=TPI_merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
-DPI_html=DPI_merge.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+
+FBI1_html=FBI_P_1.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+FBI2_html=FBI_P_2.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+TBI1_html=TBI_P_1.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+TBI2_html=TBI_P_2.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+DBI1_html=DBI_P_1.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+DBI2_html=DBI_P_2.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+
+FPI1_html=FPI_P_1.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+FPI2_html=FPI_P_2.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+TPI1_html=TPI_P_1.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+TPI2_html=TPI_P_2.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+DPI1_html=DPI_P_1.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+DPI2_html=DPI_P_2.to_html().replace('<table border="1"','<table border="1" style="border:1px solid rgb(188, 188, 188); font-size:0.8rem; border-collapse:collapse; text-align:center;font-family:Arial Narrow;"')
+
 
 
 # text align center & column color
@@ -24,12 +33,19 @@ F_PACE_html=F_PACE_html.replace('<tr style="text-align: right;">','<tr style="te
 T_PACE_html=T_PACE_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(238, 238, 238);">')
 D_PACE_html=D_PACE_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(238, 238, 238);">')
 
-FBI_html=FBI_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
-TBI_html=TBI_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
-DBI_html=DBI_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
-FPI_html=FPI_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
-TPI_html=TPI_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
-DPI_html=DPI_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+FBI1_html=FBI1_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+FBI2_html=FBI2_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+TBI1_html=TBI1_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+TBI2_html=TBI2_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+DBI1_html=DBI1_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+DBI2_html=DBI2_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+
+FPI1_html=FPI1_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+FPI2_html=FPI2_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+TPI1_html=TPI1_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+TPI2_html=TPI2_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+DPI1_html=DPI1_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
+DPI2_html=DPI2_html.replace('<tr style="text-align: right;">','<tr style="text-align: center; background-color:rgb(221,235,247);">')
 
 
 # row color & padding
@@ -39,12 +55,20 @@ D_BPAE_html=D_BPAE_html.replace('<th>','<th style="text-align: center; backgroun
 F_PACE_html=F_PACE_html.replace('<th>','<th style="text-align: center; background-color:rgb(238, 238, 238); padding:5px;">')
 T_PACE_html=T_PACE_html.replace('<th>','<th style="text-align: center; background-color:rgb(238, 238, 238); padding:5px;">')
 D_PACE_html=D_PACE_html.replace('<th>','<th style="text-align: center; background-color:rgb(238, 238, 238); padding:5px;">')
-FBI_html=FBI_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
-TBI_html=TBI_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
-DBI_html=DBI_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
-FPI_html=FPI_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
-TPI_html=TPI_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
-DPI_html=DPI_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+
+FBI1_html=FBI1_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+FBI2_html=FBI2_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+TBI1_html=TBI1_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+TBI2_html=TBI2_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+DBI1_html=DBI1_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+DBI2_html=DBI2_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+
+FPI1_html=FPI1_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+FPI2_html=FPI2_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+TPI1_html=TPI1_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+TPI2_html=TPI2_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+DPI1_html=DPI1_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
+DPI2_html=DPI2_html.replace('<th>','<th style="text-align: center; background-color:rgb(221,235,247); padding:5px;">')
 
 
 # model, tool

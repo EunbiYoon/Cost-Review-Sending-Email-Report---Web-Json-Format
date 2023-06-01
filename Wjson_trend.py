@@ -1,7 +1,7 @@
 import pandas as pd
 import openpyxl 
 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0526/Cost Review_0526.xlsx", sheet_name="DR_BPA")
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/Cost Review_0602.xlsx", sheet_name="TL_PAC")
 
 #column_list
 column_list=list(read_excel.columns)
