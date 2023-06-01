@@ -94,6 +94,7 @@ T_PACE_Merge.index=range(1,len(T_PACE_Merge)+1)
 D_BPAE_Merge.index=range(1,len(D_BPAE_Merge)+1)
 D_PACE_Merge.index=range(1,len(D_PACE_Merge)+1)
 
+#add the week W2,W3,W4,W5
 
 ############################ Item Table ############################  
 #data read
