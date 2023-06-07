@@ -70,7 +70,6 @@ D_PACE_Merge=D_PACE_Merge.drop(['Unnamed: 0'],axis=1)
 
 
 # add the expected value
-print(F_BPAE_Merge)
 F_BPAE_Merge[next_week1]=round(F_BPAE_Merge[this_week]-0.1,1)
 F_BPAE_Merge[next_week2]=round(F_BPAE_Merge[this_week]-0.2,1)
 F_BPAE_Merge[next_week3]=round(F_BPAE_Merge[this_week]-0.3,1)
@@ -133,7 +132,6 @@ T_BPA_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0609/data.x
 F_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0609/data.xlsx", sheet_name="FL_PAC_Item")
 D_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0609/data.xlsx", sheet_name="DR_PAC_Item")
 T_PAC_I=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0609/data.xlsx", sheet_name="TL_PAC_Item")
-
 
 #data required
 F_BPA_I=F_BPA_I.drop([0],axis=0)

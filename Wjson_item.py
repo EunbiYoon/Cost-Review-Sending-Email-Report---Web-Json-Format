@@ -7,7 +7,7 @@ import sys
 # from Adata import TBI_P_2 as read_value
 
 #manually read excel 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0602/Cost Review_0602.xlsx", sheet_name="FL_PAC_Item")
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0609/Cost Review_0609.xlsx", sheet_name="FL_PAC_Item")
 read_excel=read_excel.drop('Unnamed: 0', axis=1)
 
 # read_increase=read_excel[["Increase","VI","Date","Reason"]]
@@ -28,7 +28,6 @@ read_decrease.at["Total","VI"]=decrease_total
 read_decrease=read_decrease.fillna('')
 
 read_value=read_decrease
-print(read_value)
 
 ########### increase_item
 #column_list
