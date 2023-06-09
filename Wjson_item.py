@@ -7,7 +7,7 @@ import sys
 # from Adata import TBI_P_2 as read_value
 
 #manually read excel 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0609/Cost Review_0609.xlsx", sheet_name="DR_PAC_Item")
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0609/Cost Review_0609.xlsx", sheet_name="FL_PAC_Item")
 read_excel=read_excel.drop('Unnamed: 0', axis=1)
 
 #round 2
