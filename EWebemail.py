@@ -9,8 +9,8 @@ from email.mime.application import MIMEApplication
 import os
 
 # today date
-today_date='0609'
-this_week='23.06 W2'
+today_date='0616'
+this_week='23.06 W3'
 
 #html - table
 server = smtplib.SMTP('lgekrhqmh01.lge.com:25')
@@ -72,8 +72,8 @@ msg.attach(image6)
 
 
 #첨부 파일1
-etcFileName='Cost Review_0609.xlsx'
-with open("C:/Users/RnD Workstation/Documents/CostReview/0609/Cost Review_0609.xlsx", 'rb') as etcFD : 
+etcFileName='Cost Review_0616.xlsx'
+with open("C:/Users/RnD Workstation/Documents/CostReview/0616/Cost Review_0616.xlsx", 'rb') as etcFD : 
     etcPart = MIMEApplication( etcFD.read() )
     #첨부파일의 정보를 헤더로 추가
     etcPart.add_header('Content-Disposition','attachment', filename=etcFileName)
