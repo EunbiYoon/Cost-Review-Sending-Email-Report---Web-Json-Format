@@ -9,8 +9,8 @@ from email.mime.application import MIMEApplication
 import os
 
 # today date
-today_date='0616'
-this_week='23.06 W3'
+today_date='0623'
+this_week='23.06 W4'
 
 #html - table
 server = smtplib.SMTP('lgekrhqmh01.lge.com:25')
@@ -21,8 +21,8 @@ msg=MIMEMultipart()
 
 # 수신자 발신자 지정
 msg['From']='eunbi1.yoon@lge.com'
-msg['To' ]='iggeun.kwon@lge.com'
-msg['Cc']='janine.williams@lge.com, karina1.beveridge@lge.com, kitae3.park@lge.com, soyoung1.an@lge.com, soyoon1.kim@lge.com, wolyong.ha@lge.com, grace.hwang@lge.com, tg.kim@lge.com, seongju.yu@lge.com, minhyoung.sun@lge.com, jongseop.kim@lge.com, richard.song@lge.com, gilnam.lee@lge.com, jacey.jung@lge.com, ##312718@lge.com'
+# msg['To' ]='iggeun.kwon@lge.com'
+# msg['Cc']='janine.williams@lge.com, karina1.beveridge@lge.com, kitae3.park@lge.com, soyoung1.an@lge.com, soyoon1.kim@lge.com, wolyong.ha@lge.com, grace.hwang@lge.com, tg.kim@lge.com, seongju.yu@lge.com, minhyoung.sun@lge.com, jongseop.kim@lge.com, richard.song@lge.com, gilnam.lee@lge.com, jacey.jung@lge.com, ##312718@lge.com'
 msg['Bcc']='eunbi1.yoon@lge.com'
 
 #Subject 꾸미기
@@ -72,8 +72,8 @@ msg.attach(image6)
 
 
 #첨부 파일1
-etcFileName='Cost Review_0616.xlsx'
-with open("C:/Users/RnD Workstation/Documents/CostReview/0616/Cost Review_0616.xlsx", 'rb') as etcFD : 
+etcFileName='Cost Review_'+today_date+'.xlsx'
+with open("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+today_date+".xlsx", 'rb') as etcFD : 
     etcPart = MIMEApplication( etcFD.read() )
     #첨부파일의 정보를 헤더로 추가
     etcPart.add_header('Content-Disposition','attachment', filename=etcFileName)

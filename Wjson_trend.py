@@ -1,12 +1,16 @@
 import pandas as pd
-import openpyxl 
 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0616/Cost Review_0616.xlsx", sheet_name="DR_PAC")
+# today date
+today_date='0623'
+this_week='23.06 W4'
+model="DR_PAC"
+
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+this_week+".xlsx", sheet_name=model)
 
 #column_list
 column_list=list(read_excel.columns)
 # column json file format
-column_json=str({"columns":column_list}).replace("{",'').replace("}",'').replace("'",'"').replace('nan','""')
+column_json=str({"columns":column_list}).replace("{",'').replace("}",'').replace("'",'"').replace('nan','""').replace("Unnamed: 0","")
 print("")
 print(column_json+",")
 
@@ -14,7 +18,6 @@ print(column_json+",")
 read_excel=read_excel.T
 read_excel.reset_index(inplace=True, drop=True)
 read_excel=read_excel.T
-
 
 #round 1
 for i in range(len(read_excel.index)):
@@ -41,3 +44,6 @@ for i in range(len(read_excel.index)):
         AA="{"+str(bb.at[0,i])+aA+"},"
         print(AA)
 print(']')
+
+#space for copy and paste
+print("")
