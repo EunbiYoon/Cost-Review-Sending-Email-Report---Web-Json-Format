@@ -1,13 +1,12 @@
 import pandas as pd
-import openpyxl 
-import sys
 
-#automatic working from Adata
-# sys.path.insert(0,'C:/Users/RnD Workstation/Documents/CostReview/PGM/Report_Email')
-# from Adata import TBI_P_2 as read_value
+# today date
+today_date='0623'
+this_week='23.06 W4'
+model="DR_PAC"
 
 #manually read excel 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0616/Cost Review_0616.xlsx", sheet_name="DR_PAC_Item")
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+this_week+".xlsx", sheet_name=model+"_Item")
 read_excel=read_excel.drop('Unnamed: 0', axis=1)
 
 #round 2
