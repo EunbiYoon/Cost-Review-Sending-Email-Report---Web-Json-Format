@@ -1,7 +1,7 @@
 import pandas as pd
 import openpyxl 
 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0616/Cost Review_0616.xlsx", sheet_name="DR_PAC")
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/0623/Cost Review_0623.xlsx", sheet_name="DR_PAC")
 index_list=list(read_excel["Tool"])
 extract_data=read_excel.drop(["Model","Tool"],axis=1)
 extract_data.index=range(1,len(extract_data.index)+1)
