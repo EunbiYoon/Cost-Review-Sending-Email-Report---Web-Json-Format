@@ -1,11 +1,11 @@
 import pandas as pd
 
 # today date
-today_date='0628'
-this_week='23.06 W5'
-model="TL_PAC"
+today_date='0714'
+this_week='23.07 W2'
+model="DR_BPA"
 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+this_week+".xlsx", sheet_name=model)
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+today_date+".xlsx", sheet_name=model)
 
 #column_list
 column_list=list(read_excel.columns)

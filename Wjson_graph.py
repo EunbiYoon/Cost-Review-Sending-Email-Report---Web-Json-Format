@@ -1,12 +1,12 @@
 import pandas as pd
 
 ############# file name #############
-today_date="0628"
-week_data="23.06 W5"
+today_date="0714"
+week_data="23.07 W2"
 model="TL_PAC"
 #####################################
 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+week_data+".xlsx", sheet_name=model)
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+today_date+".xlsx", sheet_name=model)
 index_list=list(read_excel["Tool"])
 extract_data=read_excel.drop(["Model","Tool"],axis=1)
 extract_data.index=range(1,len(extract_data.index)+1)

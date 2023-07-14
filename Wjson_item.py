@@ -1,12 +1,12 @@
 import pandas as pd
 
 # today date
-today_date='0628'
-this_week='23.06 W5'
-model="TL_PAC"
+today_date='0714'
+this_week='23.07 W2'
+model="FL_PAC"
 
 #manually read excel 
-read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+this_week+".xlsx", sheet_name=model+"_Item")
+read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+today_date+".xlsx", sheet_name=model+"_Item")
 read_excel=read_excel.drop('Unnamed: 0', axis=1)
 
 #round 2
