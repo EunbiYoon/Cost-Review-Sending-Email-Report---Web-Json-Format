@@ -3,7 +3,7 @@ import pandas as pd
 ############# file name #############
 today_date="0714"
 week_data="23.07 W2"
-model="TL_PAC"
+model="TL_BPA"
 #####################################
 
 read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+today_date+".xlsx", sheet_name=model)
