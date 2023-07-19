@@ -9,8 +9,8 @@ from email.mime.application import MIMEApplication
 import os
 
 # today date
-today_date='0714'
-this_week='23.07 W2'
+today_date='0721'
+this_week='23.07 W3'
 
 #html - table
 server = smtplib.SMTP('lgekrhqmh01.lge.com:25')
