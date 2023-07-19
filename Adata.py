@@ -4,7 +4,7 @@ import datetime
 import numpy as np
 
 #This weeknum
-this_week="23.07 W2"
+this_week="23.07 W3"
 next_month1="23.08"
 next_month2="23.09"
 
@@ -12,13 +12,13 @@ next_month2="23.09"
 last_result="Cost Review_last"
 
 #add the week
-next_week1="23.07 W3"
-next_week2="23.07 W4"
+next_week1="23.07 W4"
+# next_week2="23.07 W4"
 # next_week3="23.07 W4"
 
 #read data - last and original
-data_last="0707"
-data_this="0714"
+data_last="0714"
+data_this="0721"
 
 ############################ Trend Table ############################  
 #read original data
@@ -75,42 +75,42 @@ D_PACE_Merge=D_PACE_Merge.drop(['Unnamed: 0'],axis=1)
 
 # add the expected value
 F_BPAE_Merge[next_week1]=round(F_BPAE_Merge[this_week]-0.1,1)
-F_BPAE_Merge[next_week2]=round(F_BPAE_Merge[this_week]-0.2,1)
+#F_BPAE_Merge[next_week2]=round(F_BPAE_Merge[this_week]-0.2,1)
 # F_BPAE_Merge[next_week3]=round(F_BPAE_Merge[this_week]-0.3,1)
 # F_BPAE_Merge[next_week4]=round(F_BPAE_Merge[this_week]-0.4,1)
 F_BPAE_Merge[next_month1]=round(F_BPAE_Merge[this_week]-0.5,1)
 F_BPAE_Merge[next_month2]=round(F_BPAE_Merge[this_week]-1,1)
 
 F_PACE_Merge[next_week1]=round(F_PACE_Merge[this_week]-0.1,1)
-F_PACE_Merge[next_week2]=round(F_PACE_Merge[this_week]-0.2,1)
+#F_PACE_Merge[next_week2]=round(F_PACE_Merge[this_week]-0.2,1)
 # F_PACE_Merge[next_week3]=round(F_PACE_Merge[this_week]-0.3,1)
 # F_PACE_Merge[next_week4]=round(F_PACE_Merge[this_week]-0.4,1)
 F_PACE_Merge[next_month1]=round(F_PACE_Merge[this_week]-0.5,1)
 F_PACE_Merge[next_month2]=round(F_PACE_Merge[this_week]-1,1)
 
 T_BPAE_Merge[next_week1]=round(T_BPAE_Merge[this_week]-0.1,1)
-T_BPAE_Merge[next_week2]=round(T_BPAE_Merge[this_week]-0.2,1)
+#T_BPAE_Merge[next_week2]=round(T_BPAE_Merge[this_week]-0.2,1)
 # T_BPAE_Merge[next_week3]=round(T_BPAE_Merge[this_week]-0.3,1)
 # T_BPAE_Merge[next_week4]=round(T_BPAE_Merge[this_week]-0.4,1)
 T_BPAE_Merge[next_month1]=round(T_BPAE_Merge[this_week]-0.5,1)
 T_BPAE_Merge[next_month2]=round(T_BPAE_Merge[this_week]-1,1)
 
 T_PACE_Merge[next_week1]=round(T_PACE_Merge[this_week]-0.1,1)
-T_PACE_Merge[next_week2]=round(T_PACE_Merge[this_week]-0.2,1)
+#T_PACE_Merge[next_week2]=round(T_PACE_Merge[this_week]-0.2,1)
 # T_PACE_Merge[next_week3]=round(T_PACE_Merge[this_week]-0.3,1)
 # T_PACE_Merge[next_week4]=round(T_PACE_Merge[this_week]-0.4,1)
 T_PACE_Merge[next_month1]=round(T_PACE_Merge[this_week]-0.5,1)
 T_PACE_Merge[next_month2]=round(T_PACE_Merge[this_week]-1,1)
 
 D_BPAE_Merge[next_week1]=round(D_BPAE_Merge[this_week]-0.1,1)
-D_BPAE_Merge[next_week2]=round(D_BPAE_Merge[this_week]-0.2,1)
+#D_BPAE_Merge[next_week2]=round(D_BPAE_Merge[this_week]-0.2,1)
 # D_BPAE_Merge[next_week3]=round(D_BPAE_Merge[this_week]-0.3,1)
 # D_BPAE_Merge[next_week4]=round(D_BPAE_Merge[this_week]-0.4,1)
 D_BPAE_Merge[next_month1]=round(D_BPAE_Merge[this_week]-0.5,1)
 D_BPAE_Merge[next_month2]=round(D_BPAE_Merge[this_week]-1,1)
 
 D_PACE_Merge[next_week1]=round(D_PACE_Merge[this_week]-0.1,1)
-D_PACE_Merge[next_week2]=round(D_PACE_Merge[this_week]-0.2,1)
+#D_PACE_Merge[next_week2]=round(D_PACE_Merge[this_week]-0.2,1)
 # D_PACE_Merge[next_week3]=round(D_PACE_Merge[this_week]-0.3,1)
 # D_PACE_Merge[next_week4]=round(D_PACE_Merge[this_week]-0.4,1)
 D_PACE_Merge[next_month1]=round(D_PACE_Merge[this_week]-0.5,1)
