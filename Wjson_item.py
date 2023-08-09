@@ -1,9 +1,9 @@
 import pandas as pd
 
 # today date
-today_date='0804'
-this_week='23.08 W1'
-model="TL_PAC"
+today_date='0811'
+this_week='23.08 W2'
+model="FL_PAC"
 
 #manually read excel 
 read_excel=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+today_date+"/Cost Review_"+today_date+".xlsx", sheet_name=model+"_Item")

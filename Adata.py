@@ -4,19 +4,19 @@ import datetime
 import numpy as np
 
 #read data - last and original
-data_last="0728"
-data_this="0804"
+data_last="0804"
+data_this="0811"
 
 #This weeknum
-this_week="23.08 W1"
+this_week="23.08 W2"
 
 #lastweek
 last_result="Cost Review_last"
 
 #add the week
-next_week1="23.08 W2"
-next_week2="23.08 W3"
-next_week3="23.08 W4"
+next_week1="23.08 W3"
+next_week2="23.08 W4"
+#next_week3="23.08 W4"
 
 next_month1="23.09"
 next_month2="23.10"
@@ -78,42 +78,42 @@ D_PACE_Merge=D_PACE_Merge.drop(['Unnamed: 0'],axis=1)
 # add the expected value
 F_BPAE_Merge[next_week1]=round(F_BPAE_Merge[this_week]-0.1,1)
 F_BPAE_Merge[next_week2]=round(F_BPAE_Merge[this_week]-0.2,1)
-F_BPAE_Merge[next_week3]=round(F_BPAE_Merge[this_week]-0.3,1)
+#F_BPAE_Merge[next_week3]=round(F_BPAE_Merge[this_week]-0.3,1)
 # F_BPAE_Merge[next_week4]=round(F_BPAE_Merge[this_week]-0.4,1)
 F_BPAE_Merge[next_month1]=round(F_BPAE_Merge[this_week]-0.5,1)
 F_BPAE_Merge[next_month2]=round(F_BPAE_Merge[this_week]-1,1)
 
 F_PACE_Merge[next_week1]=round(F_PACE_Merge[this_week]-0.1,1)
 F_PACE_Merge[next_week2]=round(F_PACE_Merge[this_week]-0.2,1)
-F_PACE_Merge[next_week3]=round(F_PACE_Merge[this_week]-0.3,1)
+#F_PACE_Merge[next_week3]=round(F_PACE_Merge[this_week]-0.3,1)
 # F_PACE_Merge[next_week4]=round(F_PACE_Merge[this_week]-0.4,1)
 F_PACE_Merge[next_month1]=round(F_PACE_Merge[this_week]-0.5,1)
 F_PACE_Merge[next_month2]=round(F_PACE_Merge[this_week]-1,1)
 
 T_BPAE_Merge[next_week1]=round(T_BPAE_Merge[this_week]-0.1,1)
 T_BPAE_Merge[next_week2]=round(T_BPAE_Merge[this_week]-0.2,1)
-T_BPAE_Merge[next_week3]=round(T_BPAE_Merge[this_week]-0.3,1)
+#T_BPAE_Merge[next_week3]=round(T_BPAE_Merge[this_week]-0.3,1)
 # T_BPAE_Merge[next_week4]=round(T_BPAE_Merge[this_week]-0.4,1)
 T_BPAE_Merge[next_month1]=round(T_BPAE_Merge[this_week]-0.5,1)
 T_BPAE_Merge[next_month2]=round(T_BPAE_Merge[this_week]-1,1)
 
 T_PACE_Merge[next_week1]=round(T_PACE_Merge[this_week]-0.1,1)
 T_PACE_Merge[next_week2]=round(T_PACE_Merge[this_week]-0.2,1)
-T_PACE_Merge[next_week3]=round(T_PACE_Merge[this_week]-0.3,1)
+#T_PACE_Merge[next_week3]=round(T_PACE_Merge[this_week]-0.3,1)
 # T_PACE_Merge[next_week4]=round(T_PACE_Merge[this_week]-0.4,1)
 T_PACE_Merge[next_month1]=round(T_PACE_Merge[this_week]-0.5,1)
 T_PACE_Merge[next_month2]=round(T_PACE_Merge[this_week]-1,1)
 
 D_BPAE_Merge[next_week1]=round(D_BPAE_Merge[this_week]-0.1,1)
 D_BPAE_Merge[next_week2]=round(D_BPAE_Merge[this_week]-0.2,1)
-D_BPAE_Merge[next_week3]=round(D_BPAE_Merge[this_week]-0.3,1)
+#D_BPAE_Merge[next_week3]=round(D_BPAE_Merge[this_week]-0.3,1)
 # D_BPAE_Merge[next_week4]=round(D_BPAE_Merge[this_week]-0.4,1)
 D_BPAE_Merge[next_month1]=round(D_BPAE_Merge[this_week]-0.5,1)
 D_BPAE_Merge[next_month2]=round(D_BPAE_Merge[this_week]-1,1)
 
 D_PACE_Merge[next_week1]=round(D_PACE_Merge[this_week]-0.1,1)
 D_PACE_Merge[next_week2]=round(D_PACE_Merge[this_week]-0.2,1)
-D_PACE_Merge[next_week3]=round(D_PACE_Merge[this_week]-0.3,1)
+#D_PACE_Merge[next_week3]=round(D_PACE_Merge[this_week]-0.3,1)
 # D_PACE_Merge[next_week4]=round(D_PACE_Merge[this_week]-0.4,1)
 D_PACE_Merge[next_month1]=round(D_PACE_Merge[this_week]-0.5,1)
 D_PACE_Merge[next_month2]=round(D_PACE_Merge[this_week]-1,1)
@@ -319,12 +319,12 @@ TPI_L.reset_index(inplace=True, drop=True)
 DPI_L.reset_index(inplace=True, drop=True)
 
 # read previous report and merge
-FBI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/Cost Review_"+data_last+".xlsx", sheet_name="FL_BPA_Item")
-TBI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/Cost Review_"+data_last+".xlsx", sheet_name="TL_BPA_Item")
-DBI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/Cost Review_"+data_last+".xlsx", sheet_name="DR_BPA_Item")
-FPI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/Cost Review_"+data_last+".xlsx", sheet_name="FL_PAC_Item")
-TPI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/Cost Review_"+data_last+".xlsx", sheet_name="TL_PAC_Item")
-DPI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/Cost Review_"+data_last+".xlsx", sheet_name="DR_PAC_Item")
+FBI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/"+last_result+".xlsx", sheet_name="FL_BPA_Item")
+TBI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/"+last_result+".xlsx", sheet_name="TL_BPA_Item")
+DBI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/"+last_result+".xlsx", sheet_name="DR_BPA_Item")
+FPI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/"+last_result+".xlsx", sheet_name="FL_PAC_Item")
+TPI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/"+last_result+".xlsx", sheet_name="TL_PAC_Item")
+DPI_P=pd.read_excel("C:/Users/RnD Workstation/Documents/CostReview/"+data_last+"/"+last_result+".xlsx", sheet_name="DR_PAC_Item")
 
 FBI_P.index=FBI_P["Unnamed: 0"]
 FBI_P=FBI_P.drop(["Unnamed: 0"], axis=1)
