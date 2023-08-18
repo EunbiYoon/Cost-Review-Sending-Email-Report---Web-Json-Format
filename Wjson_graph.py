@@ -1,8 +1,8 @@
 import pandas as pd
 
 ############# file name #############
-today_date="0811"
-week_data="23.08 W2"
+today_date="0818"
+week_data="23.08 W3"
 model="DR_PAC"
 #####################################
 
